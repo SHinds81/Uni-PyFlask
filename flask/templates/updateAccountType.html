@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm">
+            <h1>Change Account Type</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <label>Enter User ID</label>
+            <input type = "text" class = "userid" id = "userid" name = "userid" placeholder = "Enter User ID" value = "" required>
+            <br>
+            <label>Select Account type to Change</label>
+            <br>
+            <div class = "usertype_select">
+                <select id = "usertype" name  = "usertype" class = "form-control">
+                    <option class = "form-control" value = "Customer">Customer</option>
+                    <option class = "form-control" value = "Manager">Company Manager</option>
+                    <option class = "form-control" value = "Engineer">Engineer</option>
+                    <option class = "form-control" value = "Admin">Admin</option>
+                </select>
+            </div>
+            <div class = "buttonholder">
+                <button id="change" formaction="/changetype">Change Account Type</button>
+            </div>
+        </form>  
+    </body>
+</html>

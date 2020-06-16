@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm" method = "post">
+            <h1>Update a User</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class = "buttonholder">
+                <button id="change" formaction="/updatefirstname">Update First Name</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updatelastname">Update Last Name</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updateemail">Update Email</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updateaccounttype">Update Account Type</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updateaccountstatus">Update Account Status</button>
+            </div>
+        </form>  
+    </body>
+</html>

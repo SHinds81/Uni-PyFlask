@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm" method = "post">
+            <h1>Welcome {{ value }}!</h1>
+            <div class = "buttonholder">
+                <button id="history" formaction="/history">History of My Booked Cars</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="available" formaction="/available">Show All Available Cars</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="search" formaction="/search">Search a Car</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="book" formaction="/book">Book a Car</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="cancel" formaction="/cancel">Cancel a Booking</button>
+            </div>
+            <br>
+        </form>  
+    </body>
+</html>

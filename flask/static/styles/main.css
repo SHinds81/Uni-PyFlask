@@ -1,0 +1,350 @@
+body {
+    padding: 0 0 40px;
+    color: #333;
+    background: #f9f9f9;
+    background-color: #2e2927;
+    background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+    display: flex;
+    height:100%;
+    width: 100%;
+}
+  
+h1{
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+}
+
+h2{
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: red;
+}
+
+label
+{
+  margin: 0 20px;
+  display: inline-block;
+  width: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:white;
+}
+
+p
+{
+  margin: 0 20px;
+  display: inline-block;
+  width: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+input, .form-control{
+  padding: 12px 200px;
+  margin: 8px 20px;
+  background-color:#212121;
+  box-sizing: content-box;
+  display: inline-block;
+  width: 100px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+}
+
+input.searchcriteria, input.bookinguser{
+  padding: 12px 200px;
+  margin: 8px 20px;
+  background-color:#212121;
+  box-sizing: content-box;
+  display: inline-block;
+  width: 155px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;     
+}
+  
+form.signup, form.login, form.view, form.history, form.createbooking, form.showresults, form.availablecars, form.searchhistory, form.cancel, form.adminview, form.addRemove, form.adminView, form.createcar{
+  background-color: #2e2e2e;
+  margin:auto;
+  align-items: center;
+  box-shadow: 0px 0px 18px 4px #696969;
+  padding: 16px 25px;
+}
+
+.buttonholder #submit, 
+.buttonholder #submitbooking, 
+.buttonholder #bookinghistory, 
+.buttonholder #cancelbooking, 
+.buttonholder #cancelbookingfinal,
+.buttonholder #adminhistory,
+.buttonholder #searchuser,
+.buttonholder #adminhistory,
+.buttonholder #searchuser,
+.buttonholder #addremove,
+.buttonholder #updateuser,
+.buttonholder #updatecar,
+.buttonholder #report,
+.buttonholder #userId,
+.buttonholder #firstname,
+.buttonholder #lastname,
+.buttonholder #email,
+.buttonholder #accountType,
+.buttonholder #accountStatus,
+.buttonholder #adduser,
+.buttonholder #addcar,
+.buttonholder #removeuser,
+.buttonholder #removecar,
+.buttonholder #remove,
+.buttonholder #createcar,
+.buttonholder #reportissue,
+.buttonholder #change
+{
+  background-color: rgb(255, 196, 0);
+  border: none;
+  color: white;
+  padding: 16px 200px;
+  text-decoration: none;
+  margin: 10px 20px;
+  cursor: pointer;
+  text-align: center;  
+}
+
+.buttonholder #submitbooking
+{
+  background-color: rgb(255, 196, 0);
+  border: none;
+  color: white;
+  padding: 16px 200px;
+  text-decoration: none;
+  margin: 10px 20px;
+  cursor: pointer;
+  text-align: center;  
+  width: 36%
+}
+
+
+
+.buttonholder #history, 
+.buttonholder #available, 
+.buttonholder #search, 
+.buttonholder #book,
+.buttonholder #cancel,
+.buttonholder #carId,
+.buttonholder #bodytype,
+.buttonholder #makebrand,
+.buttonholder #colourtype,
+.buttonholder #numseats,
+.buttonholder #bookinghistory,
+.buttonholder #cancelbooking,
+.buttonholder #cancelbookingfinal,
+.buttonholder #searchuser,
+.buttonholder #adminhistory,
+.buttonholder #searchuser,
+.buttonholder #addremove,
+.buttonholder #updateuser,
+.buttonholder #updatecar,
+.buttonholder #report,
+.buttonholder #userId,
+.buttonholder #firstname,
+.buttonholder #lastname,
+.buttonholder #email,
+.buttonholder #accountType,
+.buttonholder #accountStatus,
+.buttonholder #adduser,
+.buttonholder #addcar,
+.buttonholder #removeuser,
+.buttonholder #removecar,
+.buttonholder #remove,
+.buttonholder #reportissue,
+.buttonholder #change
+{
+  background-color: rgb(255, 196, 0);
+  border: none;
+  color: white;
+  padding: 16px 200px;
+  text-decoration: none;
+  margin: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  width: 93.25%; 
+  transition-duration: 0.4s;
+}
+
+.error{
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: red;
+}
+  
+nav{
+  padding: 30px;
+  margin: 0 auto;
+  position: fixed;
+}
+  
+nav #menu {
+  margin-top: 20px;
+  margin-right: inherit;
+  float: right;
+  text-align: right;
+}
+
+  
+#menu li {
+  float: right;
+  font-size: 16px;
+  margin: 0 10px;
+  text-align: right;
+}
+
+  
+#menu #signup, #menu #login, #menu #logout{
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  display: inline-block;
+  color: #fff;
+  text-align: right;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  text-decoration: none;
+  font-size: large;
+}
+
+  
+nav ul, nav li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p{
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+}
+
+  
+a
+{
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+}
+
+table {
+  width: 100%;
+}
+
+th,td {
+  text-align: left;
+  height: 50px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
+}
+
+tr:nth-child(even) ,th
+{
+  background-color: #f2f2f2;
+}
+
+  
+/* hover effect */
+  
+#menu li {
+  position: relative;
+}
+  
+#menu li a::after, #signup:after, #login:after, #logout:after{
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.buttonholder #history:hover, 
+.buttonholder #available:hover, 
+.buttonholder #search:hover, 
+.buttonholder #book:hover,
+.buttonholder #cancel:hover,
+.buttonholder #carId:hover,
+.buttonholder #bodytype:hover,
+.buttonholder #makebrand:hover,
+.buttonholder #colourtype:hover,
+.buttonholder #numseats:hover,
+.buttonholder #searchuser:hover,
+.buttonholder #adminhistory:hover,
+.buttonholder #searchuser:hover,
+.buttonholder #addremove:hover,
+.buttonholder #updateuser:hover,
+.buttonholder #updatecar:hover,
+.buttonholder #report:hover,
+.buttonholder #userId:hover,
+.buttonholder #firstname:hover,
+.buttonholder #lastname:hover,
+.buttonholder #email:hover,
+.buttonholder #accountType:hover,
+.buttonholder #accountStatus:hover,
+.buttonholder #adduser:hover,
+.buttonholder #addcar:hover,
+.buttonholder #removeuser:hover,
+.buttonholder #removecar:hover,
+.buttonholder #remove:hover,
+.buttonholder #createcar:hover,
+.buttonholder #reportissue:hover,
+.buttonholder #change:hover
+{
+  color:black;
+  background-color: white;
+  border: 2px solid rgb(255, 196, 0);
+  box-shadow: 0 12px 16px 0 #696969, 0 17px 50px 0 #696969;
+}
+
+
+#signup:hover::after,
+#signup:focus::after,
+#login:hover::after,
+#login:focus::after,
+#logout:hover::after,
+#logout:focus::after,
+#menu li a:hover::after,
+#menu li a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+  
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+  
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+  
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}

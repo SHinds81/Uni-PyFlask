@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Auto Generated Documentation &#8212; API Documentation 0.9 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to the Car Share API documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-app">
+<span id="auto-generated-documentation"></span><h1>Auto Generated Documentation<a class="headerlink" href="#module-app" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="app.Booking">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">Booking</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bookingId</span></em>, <em class="sig-param"><span class="n">carId</span></em>, <em class="sig-param"><span class="n">userId</span></em>, <em class="sig-param"><span class="n">bookStatus</span></em>, <em class="sig-param"><span class="n">startTime</span></em>, <em class="sig-param"><span class="n">endTime</span></em>, <em class="sig-param"><span class="n">returnTime</span></em>, <em class="sig-param"><span class="n">bookingFee</span></em>, <em class="sig-param"><span class="n">customerNotes</span></em>, <em class="sig-param"><span class="n">adminNotes</span></em>, <em class="sig-param"><span class="n">locationName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.Booking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Booking class, sets up the variables for the Booking details table</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.BookingSchema">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">BookingSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.BookingSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘Interpretation’ class for the booking table</p>
+<dl class="py class">
+<dt id="app.BookingSchema.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#app.BookingSchema.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="app.BookingSchema.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#app.BookingSchema.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#app.Booking" title="app.Booking"><code class="xref py py-class docutils literal notranslate"><span class="pre">Booking</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.Car">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">Car</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">carId</span></em>, <em class="sig-param"><span class="n">makeBrand</span></em>, <em class="sig-param"><span class="n">bodyType</span></em>, <em class="sig-param"><span class="n">rego</span></em>, <em class="sig-param"><span class="n">colorType</span></em>, <em class="sig-param"><span class="n">numSeats</span></em>, <em class="sig-param"><span class="n">hourlyCost</span></em>, <em class="sig-param"><span class="n">lockStatus</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.Car" title="Permalink to this definition">¶</a></dt>
+<dd><p>Car class, sets up the variables for the Car details table</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.CarSchema">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">CarSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.CarSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘Interpretation’ class for the Car table</p>
+<dl class="py class">
+<dt id="app.CarSchema.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#app.CarSchema.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="app.CarSchema.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#app.CarSchema.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#app.Car" title="app.Car"><code class="xref py py-class docutils literal notranslate"><span class="pre">Car</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.CreateBookingSchema">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">CreateBookingSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.CreateBookingSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘Interpretation’ class for the booking table, but for creating bookings.     Due to many variables not being filled when making a new booking, a new class is required</p>
+<dl class="py class">
+<dt id="app.CreateBookingSchema.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#app.CreateBookingSchema.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="app.CreateBookingSchema.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#app.CreateBookingSchema.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#app.Booking" title="app.Booking"><code class="xref py py-class docutils literal notranslate"><span class="pre">Booking</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.Login">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">Login</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">userId</span></em>, <em class="sig-param"><span class="n">passHash</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.Login" title="Permalink to this definition">¶</a></dt>
+<dd><p>Login class, sets up the variables for the Login details table</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.LoginSchema">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">LoginSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.LoginSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ~Schema(ModelSchema) classes are the ‘interpretation’ classes between the database and the API.     This is the API’s self contained model of the database so API calls are handled correctly before     database requests are sent.          Starting with the Login table</p>
+<dl class="py class">
+<dt id="app.LoginSchema.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#app.LoginSchema.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="app.LoginSchema.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#app.LoginSchema.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#app.Login" title="app.Login"><code class="xref py py-class docutils literal notranslate"><span class="pre">Login</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.User">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">userId</span></em>, <em class="sig-param"><span class="n">firstName</span></em>, <em class="sig-param"><span class="n">lastName</span></em>, <em class="sig-param"><span class="n">emailId</span></em>, <em class="sig-param"><span class="n">accountType</span></em>, <em class="sig-param"><span class="n">accountStatus</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>User class, sets up the variables for the User details table</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.UserSchema">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">UserSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.UserSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘Interpretation’ class for the User table</p>
+<dl class="py class">
+<dt id="app.UserSchema.Meta">
+<em class="property">class </em><code class="sig-name descname">Meta</code><a class="headerlink" href="#app.UserSchema.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="app.UserSchema.Meta.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#app.UserSchema.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#app.User" title="app.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.cars_by_bodyType">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">cars_by_bodyType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bodyType</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.cars_by_bodyType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the car details from the database based on bodyType         Args:         bodyType (str): The bodyType to be entered         Returns:         JSON response (JSON): Car details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.cars_by_colorType">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">cars_by_colorType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">colorType</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.cars_by_colorType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the car details from the database based on colorType         Args:         colorType (str): The colorType to be entered                 Returns:         JSON response (JSON): Car details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.cars_by_makebrand">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">cars_by_makebrand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">makeBrand</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.cars_by_makebrand" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the car details from the database based on makeBrand         Args:         makeBrand (str): The makeBrand to be entered         Returns:         JSON response (JSON): Car details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.cars_by_numSeats">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">cars_by_numSeats</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">numSeats</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.cars_by_numSeats" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the car details from the database based on numSeats             Args:         numSeats (int): The number of seats                 Returns:         JSON response (JSON): Car details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.create_booking">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">create_booking</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.create_booking" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function adds new user information into the database             Args:         bookingId (int): The bookingId to be entered         carId (int): The carId to be entered         userId (str): The userId to be entered         bookStatus (str): The bookStatus to be entered         startTime (str): The startTime to be entered         endTime (str): The endTime to be entered</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.create_car">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">create_car</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.create_car" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function adds new user information into the database             Args:         carId (int): The carId to be entered         makeBrand  (str): The makeBrand to be entered         bodyType (str): The bodyType to be entered         rego (str): The rego to be entered         colorType (str): The colorType to be entered         numSeats (str): The numSeats to be entered         hourlyCost (str): The hourlyCost to be entered         lockStatus (bool): The lockStatus of the car</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.create_login">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">create_login</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.create_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function adds new login information into the database             Args:         userId (int): The colorType to be entered         passHash (str): The passHash to be entered</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.create_user">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">create_user</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.create_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function adds new user information into the database             Args:         userId (str): The userId to be entered         firstName (str): The firstName to be entered         lastName (str): The lastName to be entered         emailId (str): The emailId to be entered         accountType (str): The accountType to be entered         accountStatus (str): The accountStatus to be entered</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.delete_booking_by_id">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">delete_booking_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bookingId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.delete_booking_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function deletes the booking from the database based on bookingId             Args:         bookingId (int): The bookingId to be entered</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.delete_car_by_id">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">delete_car_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">carId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.delete_car_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function deletes the car from the database based on carId             Args:         carId (int): The colorType to be entered</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.delete_login_by_id">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">delete_login_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">userId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.delete_login_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function deletes the login information from the database based on userId             Args:         userId (userId): The userId to be entered</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.delete_user_by_id">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">delete_user_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">userId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.delete_user_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function deletes the user from the database based on userId             Args:         userId (str): The userId to be entered</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_all_bookings">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_all_bookings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.get_all_bookings" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns all booking details, does not take arguments             Returns:         JSON response (JSON): Booking details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_all_cars">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_all_cars</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.get_all_cars" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns all car details, takes no arguments             Returns:         JSON response (JSON): Car details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_all_logins">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_all_logins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.get_all_logins" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns all login details from the table, takes no arguments 
+Returns:         JSON response (JSON): The login table</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_all_users">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_all_users</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.get_all_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns all user details from the database, takes no arguments         Returns:         JSON response (JSON): User details in JSON format</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_available_cars">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_available_cars</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.get_available_cars" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns cars from the database which either don’t appear in the bookingDetails table     or are not currently booked in the bookingDetails table.  Takes no arguments             Returns:         JSON response (JSON): carId’s</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_booking_by_bookingid">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_booking_by_bookingid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bookingId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.get_booking_by_bookingid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the booking details from the database based on bookingId             Args:         bookingId (int): The bookingId to search by                 Returns:         JSON response (JSON): Booking details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_bookings_by_userId">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_bookings_by_userId</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">userId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.get_bookings_by_userId" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the booking history from the database from the entered userID             Args:         userId (str): The userId to be entered                 Returns:         JSON response (JSON): Booking details in JSON format</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_car_by_carid">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_car_by_carid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">carId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.get_car_by_carid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the car details from the database based on carId             Args:         carId (int): The carId to be entered                 Returns:         JSON response (JSON): Car details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_login_by_userid">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_login_by_userid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">userId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.get_login_by_userid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the hashed password from the database from the entered userID             Args:         userId (str): The userId to be entered                 Returns:         JSON response (JSON): The userId and passHash in JSON format</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.get_user_by_userid">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">get_user_by_userid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">userId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.get_user_by_userid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the user details from the database from the entered userID         Args:         userId (str): The userId to be entered                 Returns:         JSON response (JSON): User details in JSON format</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.max_bookingid">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">max_bookingid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.max_bookingid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns the max bookingId from the database, takes no arguments         Returns:         JSON response (JSON): Max bookingId</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.update_booking_by_bookingId">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">update_booking_by_bookingId</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bookingId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.update_booking_by_bookingId" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is for changing a value in the booking database.  It takes three arguments, which     booking to change (based on bookingId), which value to change and the value to change it to</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.update_car_by_carid">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">update_car_by_carid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">carId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.update_car_by_carid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is for changing a value in the car database.  It takes three arguments, which     car to change (based on carId), which value to change and the value to change it to</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.update_user_by_userid">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">update_user_by_userid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">userId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.update_user_by_userid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is for changing a value in the user database.  It takes three arguments, which     user to change (based on userId), which value to change and the value to change it to</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">API Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Auto Generated Documentation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to the Car Share API documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Sean Hinds.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/code.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

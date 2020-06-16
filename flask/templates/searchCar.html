@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm" method = "post">
+            <h1>Search a Car</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <input type = "text" id = "searchcriteria" name = "searchcriteria" placeholder = "Search for Car" value = "" required>
+            <div class = "buttonholder">
+                <button id="carId" formaction="/carid">Search by Car ID</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="bodytype" formaction="/bodytype">Search by Body Type</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="makebrand" formaction="/makebrand">Search by Make</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="colourtype" formaction="/colourtype">Search by Colour</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="numseats" formaction="/numseats">Search by Number of Seats</button>
+            </div>
+            <br>
+        </form>  
+    </body>
+</html>

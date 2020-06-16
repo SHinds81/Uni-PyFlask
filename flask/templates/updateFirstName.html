@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm">
+            <h1>Change First Name</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <label>Enter User ID</label>
+            <input type = "text" class = "userid" id = "userid" name = "userid" placeholder = "Enter User ID" value = "" required>
+            <br>
+            <label>Enter First Name to Change</label>
+            <input type = "text" class = "firstnamechange" id = "firstnamechange" name = "firstnamechange" placeholder="Change First Name" value = "" required>
+            <div class = "buttonholder">
+                <button id="change" formaction="/changefirstname">Change First Name</button>
+            </div>
+        </form>  
+    </body>
+</html>

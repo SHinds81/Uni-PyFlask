@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "adminview" id = "viewForm" method = "post">
+            <h1>Welcome {{ value }}!</h1>
+            <div class = "buttonholder">
+                <button id="adminhistory" formaction="/adminhistory">History of All Booked Cars</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="searchuser" formaction="/searchuser">Search for User</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="search" formaction="/search">Search a Car</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="addremove" formaction="/addremove">Add or Remove</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="updateuser" formaction="/updateuser">Update User Information</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="updatecar" formaction="/updatecar">Update Car Information</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="report" formaction="/reportcar">Report a Car</button>
+            </div>
+            <br>
+        </form>  
+    </body>
+</html>

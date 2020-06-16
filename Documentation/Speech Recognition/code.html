@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition Method Documentation &#8212; API 0.9 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to the Car Share Speech Recognition documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-app">
+<span id="speech-recognition-method-documentation"></span><h1>Speech Recognition Method Documentation<a class="headerlink" href="#module-app" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="app.AdminUser">
+<em class="property">class </em><code class="sig-prename descclassname">app.</code><code class="sig-name descname">AdminUser</code><a class="headerlink" href="#app.AdminUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents the inteface where an admin can search a car by voice commands</p>
+<dl class="py method">
+<dt id="app.AdminUser.getBooikings">
+<code class="sig-name descname">getBooikings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.AdminUser.getBooikings" title="Permalink to this definition">¶</a></dt>
+<dd><p>query the database for all bookings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.AdminUser.getCarType">
+<code class="sig-name descname">getCarType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.AdminUser.getCarType" title="Permalink to this definition">¶</a></dt>
+<dd><p>query the database for all cars of a cetrain body type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.AdminUser.getCars">
+<code class="sig-name descname">getCars</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.AdminUser.getCars" title="Permalink to this definition">¶</a></dt>
+<dd><p>query the database for all available cars</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.AdminUser.getCommand">
+<code class="sig-name descname">getCommand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.AdminUser.getCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the key command function from the users speech</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.AdminUser.getUserName">
+<code class="sig-name descname">getUserName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.AdminUser.getUserName" title="Permalink to this definition">¶</a></dt>
+<dd><p>query the database for all cars of a cetrain body type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.AdminUser.main">
+<code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.AdminUser.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main method checks what the command was form the users speech then returns a json containing the information</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="app.AdminUser.speak">
+<code class="sig-name descname">speak</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.AdminUser.speak" title="Permalink to this definition">¶</a></dt>
+<dd><p>reads in the users speech to a string and returns that value</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">API</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Speech Recognition Method Documentation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to the Car Share Speech Recognition documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Sean Hinds.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/code.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

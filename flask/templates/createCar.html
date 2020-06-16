@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+        <form class = "createcar" id = "createcar" method = "post" action = "/createcar">
+            <h1>Create Car</h1>
+            <Label>Registration Number</Label>
+            <br>
+            <input type="text" id = "rego" name="rego" placeholder="Registration Number" value="" required>
+            <br><br>
+            <Label>Make Brand</Label>
+            <br>
+            <input type="text" id = "makebrand" name="makebrand" placeholder="Make Brand" value="" required>
+            <br><br>
+            <Label>Body Type</Label>
+            <br>
+            <input type="text" id = "bodytype" name="bodytype" placeholder="Body Type" value="" required>
+            <br><br>
+            <Label>Colour of Vehicle</Label>
+            <br>
+            <input type="text" id = "colourtype" name="colourtype" placeholder="Colour" value="" required>
+            <br><br>
+            <Label>Number of Seats</Label>
+            <br>
+            <input type="number" id = "numseats" name="numseats" value="" required>
+            <br><br>
+            <Label>Hourly Cost</Label>
+            <br>
+            <input type="number" id = "hourlycost" name="hourlycost" value="" required>
+            <br><br>
+            <div class = "buttonholder">
+                <input id = "createcar" type="submit" value="Create car" onclick="carCreatedAlert()">
+            </div>
+        </form>
+        <script>
+            function carCreatedAlert(){
+                var rego = document.forms["signupform"]["rego"].value;
+                var makebrand = document.forms["signupform"]["makebrand"].value;
+                var body = document.forms["signupform"]["bodytype"].value;
+                var colour = document.forms["signupform"]["colourtype"].value;
+                var numseats = document.forms["signupform"]["numseats"].value;
+                var hourlycost = document.forms["signupform"]["hourlycost"].value;
+
+                if(rego == "")
+                {
+                    alert("Please fill in Registration Number!");
+                    return false;
+                }
+                else if (makebrand == "")
+                {
+                    alert("Please fill in Make Brand!");
+                    return false;
+                }
+                else if (body == "")
+                {
+                    alert("Please fill in Body Type!");
+                    return false;
+                }
+                else if (colour == "")
+                {
+                    alert("Please fill in Colour!");
+                    return false;
+                }
+                else if (numseats == "" || numseats < 0)
+                {
+                    alert("Please fill in Number of Seats!");
+                    return false;
+                }
+                else if(hourlycost == "" || hourlycost < 0)
+                {
+                    alert("Please fill in Hourly Cost!");
+                    return false;
+                }
+                else{
+                    alert("Car created successfully!");
+                    window.location.replace("/adminView.html");
+                    return true;
+                }   
+            }
+        </script>
+    </body>
+</html>

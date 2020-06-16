@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body onload="fillData()">
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+        <form id = "showresults" class = "showresults">
+            <h1>Results</h1>
+            <p>{{ value }}</p>
+            <!-- <table id = "searchresults" style="width:100%">
+                <tr>
+                  <th>CarID</th>
+                  <th>Registration Number</th> 
+                  <th>Body Type</th>
+                  <th>Colour Type</th>
+                  <th>Lock Status</th>
+                  <th>Make Brand</th>
+                  <th>Number of Seats</th>
+            </table> -->
+        </form>
+        
+    </body>
+    <!-- <script>
+        function fillData() {
+          var table = document.getElementById("searchresults");
+          var row = table.insertRow(1);
+          var carid = row.insertCell(0);
+          var rego = row.insertCell(1);
+          var body = row.insertCell(2);
+          var colour = row.insertCell(3);
+          var lock = row.insertCell(4)
+          var brand = row.insertCell(5)
+          var seats = row.insertCell(6)
+          carid.innerHTML = "{{ carId }}";
+          rego.innerHTML = "{{ rego }}";
+          body.innerHTML = "{{ bodyType }}";
+          colour.innerHTML = "{{ colorType }}";
+          lock.innerHTML = "{{ lockStatus }}";
+          brand.innerHTML = "{{ makeBrand }}";
+          seats.innerHTML = "{{ numSeats }}";
+        }
+        </script> -->
+</html>

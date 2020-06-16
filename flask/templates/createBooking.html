@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+        <form class = "createbooking" id = "createbooking" method = "post" action = "/createbooking">
+            <h1>Create a Booking</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <label>Enter Car ID</label>
+            <input type = "text" id = "carid" name = "carid" placeholder = "carid" value = "" required>
+            <br>
+            <!-- <label>Enter Username</label>
+            <input type="text" id = "username" name="username" placeholder="Username" value="" required> 
+            <br> -->
+            <label>Select Start Date</label>
+            <input type="datetime-local" id="starttime" name="starttime">
+            <br>
+            <label>Select End Date</label>
+            <input type="datetime-local" id="endtime" name="endtime">
+            <br>
+            <div class = "buttonholder">
+                <input id = "submitbooking" type="submit" value="Make Booking">
+            </div>
+        </form>
+    </body>
+</html>

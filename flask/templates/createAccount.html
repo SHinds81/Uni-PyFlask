@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/loginPage/">
+                                <button id="login">Log In</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+        <form class = "signup" id = "signupform" method = "post" action = "/add_user">
+            <h1>Create an Account</h1>
+            <Label>Select Type of User</Label>
+            <br>
+            <div class = "usertype_select">
+                <select id = "usertype" name  = "usertype" class = "form-control">
+                    <option class = "form-control" value = "Customer">Customer</option>
+                    <option class = "form-control" value = "Manager">Company Manager</option>
+                    <option class = "form-control" value = "Engineer">Engineer</option>
+                </select>
+            </div>
+            <br>
+            <Label>First Name</Label>
+            <br>
+            <input type="text" id = "firtsname" name="firstname" placeholder="First Name" value="" required>
+            <br><br>
+            <Label>Last Name</Label>
+            <br>
+            <input type="text" id = "lastname" name="lastname" placeholder="Last Name" value="" required>
+            <br><br>
+            <Label>Email</Label>
+            <br>
+            <input type="email" id = "email" name="email" placeholder="E-Mail" value="" required>
+            <br><br>
+            <Label>Username</Label>
+            <br>
+            <input type="text" id = "username" name="username" placeholder="Username" value="" required>
+            <br><br>
+            <Label>Password</Label>
+            <br>
+            <input type="password" id = "password" name="password" placeholder="Password" value="" required>
+            <br><br>
+            <label>Confirm Password</label>
+            <p id = "passwordWarning"></p>
+            <br>
+            <input type = "password" id = "confirmpassword" name = "confirmpassword" placeholder = "Password" value="" oninput = "checkPasswordsAreSame()" required> 
+            <br><br>
+            <div class = "buttonholder">
+                <input id = "submit" type="submit" value="Create Account" onclick="accountCreatedAlert()">
+            </div>
+        </form>
+        <script>
+            function accountCreatedAlert(){
+                var firstname = document.forms["signupform"]["firstname"].value;
+                var lastname = document.forms["signupform"]["lastname"].value;
+                var email = document.forms["signupform"]["email"].value;
+                var username = document.forms["signupform"]["username"].value;
+                var password = document.forms["signupform"]["password"].value;
+                var confirmpassword = document.forms["signupform"]["confirmpassword"].value;
+
+                if(firstname == "")
+                {
+                    alert("Please fill in First Name!");
+                    return false;
+                }
+                else if (lastname == "")
+                {
+                    alert("Please fill in Last Name!");
+                    return false;
+                }
+                else if (email == "")
+                {
+                    alert("Please fill in E-Mail!");
+                    return false;
+                }
+                else if (username == "")
+                {
+                    alert("Please fill in  Username!");
+                    return false;
+                }
+                else if (password == "")
+                {
+                    alert("Please fill in Password!");
+                    return false;
+                }
+                else if (confirmpassword == "")
+                {
+                    alert("Please fill in Confirm Password!");
+                    return false;
+                }
+                else{
+                    alert("Account created successfully!");
+                    window.location.replace("/loginPage.html");
+                    return true;
+                }   
+            }
+
+            function checkPasswordsAreSame(){
+                var pw = document.getElementById("password").value;
+                var cpw = document.getElementById("confirmpassword").value;
+                var match = false;
+
+                if(pw == cpw)
+                {
+                    document.getElementById("passwordWarning").innerHTML = "";
+                    match = true;
+                }
+                if(match == false)
+                {
+                    document.getElementById("passwordWarning").innerHTML = "Passwords do not match!";
+                    document.getElementById("passwordWarning").style.color = "red";
+                }
+                return match;
+            }
+        </script>
+    </body>
+</html>

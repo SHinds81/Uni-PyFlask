@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+        <form id = "bookinghistory" class = "history">
+            <h1>Enter Booking ID of Booking to Cancel</h1>
+            <input class = "input" type="text" name="bookingid" placeholder="Enter Booking ID" value="" required>
+            <div class = "buttonholder">
+                <button id="cancelbookingfinal" formaction = '/cancelbookingfinal'>Cancel Booking</button>
+            </div>
+            <div style="height:400px;width:400px;border:1px solid; overflow:auto;">
+                <p>{{ value }}</p>
+            </div>
+            
+        </form>
+    </body>
+</html>

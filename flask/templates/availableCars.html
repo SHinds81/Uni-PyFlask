@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body onload="fillData()">
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+        <form id = "availablecars" class = "availablecars">
+            <h1>Available Cars</h1>
+            <p>{{ value }}</p>
+        </form>    
+    </body>
+</html>

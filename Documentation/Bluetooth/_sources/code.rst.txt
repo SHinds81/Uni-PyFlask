@@ -1,0 +1,5 @@
+Bluetooth Method Documentation
+================================
+
+.. automodule:: app
+   :members:

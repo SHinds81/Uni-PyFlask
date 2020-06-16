@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm">
+            <h1>Change Colour Type</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <label>Enter Car ID</label>
+            <input type = "text" class = "carid" id = "carid" name = "carid" placeholder = "Enter Car ID" value = "" required>
+            <br>
+            <label>Enter Colour Type to Change</label>
+            <input type = "text" class = "colourtypechange" id = "colourtypechange" name = "colourtypechange" placeholder="Change Colour Type" value = "" required>
+            <div class = "buttonholder">
+                <button id="change" formaction="/changecolourtype">Change Colour Type</button>
+            </div>
+        </form>  
+    </body>
+</html>

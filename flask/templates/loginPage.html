@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                    <li>
+                        <form method="post" action="/createAccount/">
+                            <button id="signup">Sign Up</button>
+                        </form>
+                    </li>
+            </ul>
+        </nav>
+    </header>
+    <form class = "login" id="loginForm" method="post" onsubmit="return loginalert()" action = "/login">
+        <h1>Log In </h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h2>{{ message }}</h2>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <label>Username</label>
+        <br>
+        <input class = "input" type="text" name="username" placeholder="Username" value="" required>
+        <br><br>
+        <label>Password</label>
+        <br>
+        <input class = "input" type="password" name="password" placeholder="Password" value="" required>
+        <br><br>
+        <input type="hidden" name="loginRedirect" value="$loginRedirect">
+        <div class = "buttonholder">
+            <input id = "submit" type="submit" value="Log In">
+        </div>
+    </form>
+    <script>
+        function loginalert(){
+            var text = document.getElementsByClassName("input");
+            var empty = false;
+            for(var i = 0; i < text.length; i++)
+            {
+                if(text[i].empty)
+                {
+                    empty = true;
+                }
+            }
+            if(empty)
+            {
+                alert("Please fill in all fields!");
+            }   
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm">
+            <h1>Report Car</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <label>Enter Booking ID</label>
+            <input type = "text" class = "reportbookingid" id = "reportbookingid" name = "reportbookingid" placeholder = "Enter Booking ID" value = "" required>
+            <br>
+            <label>Enter Issue with Car</label>
+            <input type = "text" class = "carissue" id = "carissue" name = "carissue" placeholder="Enter issue with Car" value = "" required>
+            <div class = "buttonholder">
+                <button id="reportissue" formaction="/reportissue">Report Issue</button>
+            </div>
+        </form>  
+    </body>
+</html>

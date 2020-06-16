@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm" method = "post">
+            <h1>Search a User</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <input type = "text" class = "searchuser" id = "searchuser" name = "searchuser" placeholder = "Search for User" value = "" required>
+            <div class = "buttonholder">
+                <button id="userId" formaction="/userid">Search by User ID</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="firstname" formaction="/firstname">Search by First Name</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="lastname" formaction="/lastname">Search by Last Name</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="email" formaction="/email">Search by Email</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="accountType" formaction="/accounttype">Search by Account Type</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="accountStatus" formaction="/accountstatus">Search by Account Status</button>
+            </div>
+        </form>  
+    </body>
+</html>

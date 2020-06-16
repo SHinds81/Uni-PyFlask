@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul id="menu">
+                        <li>
+                            <form method="post" action="/logout/">
+                                <button id="logout">Log Out</button>
+                            </form>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+
+        <form class = "view" id = "viewForm" method = "post">
+            <h1>Update a Car</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class = "buttonholder">
+                <button id="change" formaction="/updaterego">Update Registration Number</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updatebodytype">Update Body Type</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updatemakebrand">Update Make Brand</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updatecolourtype">Update Colour Type</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updatenumseats">Update Number of Seats</button>
+            </div>
+            <br>
+            <div class = "buttonholder">
+                <button id="change" formaction="/updatehourlycost">Update Hourly Cost</button>
+            </div>
+            <br>
+        </form>  
+    </body>
+</html>
